@@ -13,8 +13,11 @@ with open("kitap.txt") as f:
 
 def kayitekle(self):
         ekle = open("kitap.txt", "a",)
-        with open("kitap.txt", "a") as f:
-          f.write("n\Yasar Kemal, Ince Mehmed")
+        b = input("Kayit giriniz.")
+        ekle.writelines(b)
+        for satirlar in ekle.readlines():
+            print(satirlar)
+        ekle.close()
 
 def eserarama(self):
     ekayitara = open("kitap.txt", "r", encoding="utf-8")
